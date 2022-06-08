@@ -30,8 +30,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             call = req_body.get('call')
 
     if call:
-        URL = 'https://cosmos-bfyoc.documents.azure.com:443/'
-        KEY = '3bGBHLiTXIXkPNnPEB5CefaguvDHQYnmYkPw2wt56RXJTNZeEXeOfpBGXOVgt86ewgKglbWNsa6fXF4mFegSwA=='
+        logging.info('KEY...')
+        KEY = os.getenv('PasswordFromKeyVault')
+        URL = os.getenv('URL')
         client = CosmosClient(URL, credential=KEY)
         DATABASE_NAME = 'database-bfyoc'
         database = client.get_database_client(DATABASE_NAME)
