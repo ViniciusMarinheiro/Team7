@@ -16,6 +16,7 @@ GetRating:
 GetRatings:
     http://localhost:7071/api/api-bfyoc-rating-team7?call=ratings
     https://func-team7.azurewebsites.net/api/api-bfyoc-rating-team7?code=kbC29l65GuIbN1ta64EpBDvlPH8RgjCJbLqVr6R-ehcPAzFumgtJaQ==&call=get_ratings
+xxxxxxxxxxxxxxxxx
 """
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
